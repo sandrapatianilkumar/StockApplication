@@ -1,0 +1,271 @@
+/*
+ * This file contains styling for the Main view.
+ */
+
+/*
+ * Generates a set of style rules for the "navigation" tab UI.
+ */
+@include extjs-tab-panel-ui(
+    $ui: 'navigation',
+    $ui-tab-background-color: transparent,
+    $ui-tab-background-color-over: #505050,
+    $ui-tab-background-color-active: #303030,
+    $ui-tab-background-gradient: 'none',
+    $ui-tab-background-gradient-over: 'none',
+    $ui-tab-background-gradient-active: 'none',
+    $ui-tab-color: #acacac,
+    $ui-tab-color-over: #c4c4c4,
+    $ui-tab-color-active: #fff,
+    $ui-tab-glyph-color: #acacac,
+    $ui-tab-glyph-color-over: #c4c4c4,
+    $ui-tab-glyph-color-active: #fff,
+    $ui-tab-glyph-opacity: 1,
+    $ui-tab-border-radius: 0,
+    $ui-tab-border-width: 0,
+    $ui-tab-inner-border-width: 0,
+    $ui-tab-padding: 24px,
+    $ui-tab-margin: 0,
+    $ui-tab-font-size: 15px,
+    $ui-tab-font-size-over: 15px,
+    $ui-tab-font-size-active: 15px,
+    $ui-tab-line-height: 19px,
+    $ui-tab-font-weight: bold,
+    $ui-tab-font-weight-over: bold,
+    $ui-tab-font-weight-active: bold,
+    $ui-tab-icon-width: 24px,
+    $ui-tab-icon-height: 24px,
+    $ui-tab-icon-spacing: 5px,
+    $ui-bar-background-color: #404040,
+    $ui-bar-background-gradient: 'none',
+    $ui-bar-padding: 0,
+    $ui-strip-height: 0
+);
+
+/*
+ * Generates a set of style rules for the "navigation" panel UI.
+ */
+@include extjs-panel-ui(
+    $ui: 'navigation',
+    $ui-header-color: #fff,
+    $ui-header-glyph-color: #fff,
+    $ui-header-glyph-opacity: 1,
+    $ui-header-font-size: 20px,
+    $ui-header-line-height: 24px,
+    $ui-header-font-weight: bold,
+    $ui-header-icon-height: 24px,
+    $ui-header-icon-width: 24px,
+    $ui-header-icon-spacing: 15px,
+    $ui-header-background-color: $base-color,
+    $ui-header-padding: 0,
+    $ui-header-text-margin: 36px,
+    $ui-header-noborder-adjust: false
+);
+
+.x-title-icon-navigation {
+    font-family: FontAwesome;
+    color: #fff;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.x-tab-icon-el-navigation {
+    font-family: FontAwesome;
+    color: #acacac;
+
+    .x-tab-over & {
+        color: #c4c4c4;
+    }
+
+    .x-tab-active & {
+        color: #fff;
+    }
+}
+
+.x-panel-header-title-navigation > .x-title-text-navigation:after {
+    top: 30px;
+    right: -24px;
+}
+
+.goals-dashboard-cls {
+    position:realtive;
+    margin: 5px;
+    width: 24%;
+    height: 250px;
+    color: #8c8b8b;
+    cursor: pointer;
+    background: #fff;
+    display: inline-table;
+    @include border-radius(5px);
+    //@include box-shadow(3px 3px 7px 1px #d4d4d4);
+    &:hover {
+        @include box-shadow(0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23));
+    }
+}
+.goals-dashboard-view-cls{
+    text-align:left;
+    background-color: #F2F2F2;
+}
+
+.goals-header-cls{
+    width: 100%;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 10px;
+    display: flex;
+}
+
+.goals-dash-img-cls{
+    text-align: center;
+}
+.goals-user-name{
+    flex:1;
+    padding: 5px;
+    font-size: 14px;
+    color:#fab82e;
+    font-weight: 500;
+}
+.goals-dash-user-icon{
+    width:30px; 
+    height:30px;
+    border-radius: 50%;
+    box-shadow: 1px 3px 7px 3px #dfdfe0;
+}
+.create-goal-cls{
+    margin: 5px;
+    width: 24%;
+    height: 250px;
+    color: #8c8b8b;
+    cursor: pointer;
+    background: #fff;
+    display: inline-block;
+    text-align:center;
+    @include border-radius(5px);
+    &:hover {
+        @include box-shadow(0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23));
+    }
+    position: relative;
+    top: 13px;
+}
+.plus-icon:after{
+    //content: "\f067" !important;
+    content: '\0058' !important;
+    font-size:2em !important;
+    color:#191919 !important;
+    //font-family: FontAwesome !important;
+    font-family: 'WtcFontResource' !important;
+}
+.plus-icon{
+    position: relative;
+    top: 10px;
+}
+.create-goal-text{
+    color:#65BA80;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    top: 63%;
+}
+.create-goal-plus-icon{
+    position: relative;
+    left: 40%;
+    top: 45%;
+    width: 50px;
+    height: 40px;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+}
+.goals-target-date-cls {
+    font-size: 10px;
+    font-weight: 500;
+}
+.goals-title-cls{
+    padding: 0px 0px 10px 0px;
+    width: 80%;
+    border-bottom: 1px solid #F2F2F2;
+    margin: 10px 0px 0px 25px;
+    text-align: center;
+    font-size: 12px;
+    color: #626262;
+    font-weight: 600;
+    height:40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.goals-status-icon{
+    //width:80px; 
+    //height:80px;
+}
+.goal-status-cls{
+    text-align: center;
+}
+.goal-status-text{
+    font-size: 12px;
+    color: #626262;
+    font-weight: 600;
+}
+.goals-progress-cls{
+    text-align: center;
+    //padding:10px;
+}
+.goals-progress-meter-cls{
+    width: 165px;
+    height: 12px;
+    @include border-radius(30px);
+    margin: 10px 0px 0px 0px;
+    &::-webkit-meter-bar {
+        background: #CCCCCC;
+        @include border-radius(30px);
+        @include box-shadow(0 2px 3px rgba(0,0,0,0.2) inset);
+    }
+    &::-moz-meter-bar {
+        @include border-radius(30px);
+    }
+    &:-moz-meter-optimum {
+        &::-moz-meter-bar {
+            background: #CCCCCC;
+        }
+    }
+    &::-webkit-meter-optimum-value{
+        background: #2FA54D;
+        @include border-radius(30px);
+        //@include box-shadow(0 2px 3px rgba(0,0,0,0.2) inset);
+    }
+}
+.goals-progress-meter-value{
+    font-size: 12px;
+    color: #626262;
+    font-weight: 600;
+    margin: 0px 0px 0px 5px;
+}
+.goals-karmascore-cls{
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+}
+.goals-kamra-score{
+    font-size: 22px;
+    color: #626262;
+    font-weight: 600;
+}
+.karma-score-icon:before{
+    content: '\0032' !important;
+    font-family: 'WtcFontResource' !important;
+    font-weight: 400;
+    font-size:1.8em;
+    color: #626262;
+}
+.goal-gridcls{
+     background-color: white !important;
+   opacity:1;
+}
+
+.x-panel-header-default {
+    background-image: none;
+    background-color: lightslategray;
+}
+
+.x-window-header-default {
+    background-color: lightslategray !important;
+}
+
